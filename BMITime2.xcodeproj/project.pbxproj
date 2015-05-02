@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E9C69471AF54C7F0052B155 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C69461AF54C7F0052B155 /* main.m */; };
 		3E9C694F1AF54CA00052B155 /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C694E1AF54CA00052B155 /* BNRPerson.m */; };
+		3E9C69521AF54F980052B155 /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C69511AF54F980052B155 /* BNREmployee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		3E9C69461AF54C7F0052B155 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E9C694D1AF54CA00052B155 /* BNRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPerson.h; sourceTree = "<group>"; };
 		3E9C694E1AF54CA00052B155 /* BNRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPerson.m; sourceTree = "<group>"; };
+		3E9C69501AF54F980052B155 /* BNREmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNREmployee.h; sourceTree = "<group>"; };
+		3E9C69511AF54F980052B155 /* BNREmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNREmployee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				3E9C69461AF54C7F0052B155 /* main.m */,
 				3E9C694D1AF54CA00052B155 /* BNRPerson.h */,
 				3E9C694E1AF54CA00052B155 /* BNRPerson.m */,
+				3E9C69501AF54F980052B155 /* BNREmployee.h */,
+				3E9C69511AF54F980052B155 /* BNREmployee.m */,
 			);
 			path = BMITime2;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9C69521AF54F980052B155 /* BNREmployee.m in Sources */,
 				3E9C69471AF54C7F0052B155 /* main.m in Sources */,
 				3E9C694F1AF54CA00052B155 /* BNRPerson.m in Sources */,
 			);
