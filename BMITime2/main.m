@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNREmployee.h"
+#import "BNRAsset.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -36,6 +37,40 @@ int main(int argc, const char * argv[]) {
         
         float bmi = [mike bodyMassIndex];
         NSLog(@"Mike has a BMI of %f has worked with us for %.2f years", bmi, [mike yearsOfEmployment]);
+        
+        // Create a bunch of employee objects, e with varying values based on i, and keep them in the employees NSMutableArray
+        NSMutableArray *employees = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 10; i++) {
+            BNREmployee *e = [[BNREmployee alloc] init];
+            e.weightInKilos = 90 + i;
+            e.heightInMeters = 1.8 - i/10.0;
+            e.employeeID = i;
+            [employees addObject:e];
+        }
+        
+        // Create a bunch of assets and assign to random employee
+        for (int i = 0; i < 10; i++) {
+            
+            // Instantiate the asset
+            BNRAsset *asset = [[BNRAsset alloc] init];
+            NSString *currentLabel = [NSString stringWithFormat:@"Laptop %d", i];
+            asset.label = currentLabel;
+            asset.resaleValue = 350 + i * 17;
+            
+            // Assign the asset to random employee
+            NSUInteger randomIndex = random() % [employees count];
+            BNREmployee *randomEmployee = [employees objectAtIndex:randomIndex];
+            [randomEmployee addAsset:asset];
+        }
+        
+        NSLog(@"Employees: %@", employees);
+        
+        // Watch what happens when we dealloc the parent object (the related object(s)) are also dealloc
+        NSLog(@"Giving up ownership of one employee");
+        [employees removeObjectAtIndex:5];
+        NSLog(@"Giving up ownership of arrays");
+        employees = nil;
+        
     }
     return 0;
 }
